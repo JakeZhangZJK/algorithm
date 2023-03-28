@@ -1,4 +1,4 @@
-import subStr from '../../code/string/lesson2'
+import subStr from '../../code/string/same-sub-string'
 
 test('subStr(00110011)', () => {
   expect(subStr('00110011')).toEqual(['0011', '01', '1100', '10', '0011', '01'])

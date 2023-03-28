@@ -1,10 +1,14 @@
-// 关于 LeetCode 测试用例字符串过长导致 RegExp too big的问题暂时不予修复
-// 我认为这个测试用例不合理，无论在面试中还是实际应用中这个算法思路都是足够用的
-// 我建议大家不要为了刷题而刷题
+// leetcode-696 反转字符串中的单词
+// https://leetcode.cn/problems/count-binary-substrings/
+// 知识点：Array和String API的基本应用
+/**
+ 思路：
+ 1. 建立数据结构， 堆栈， 保存数据
+ 2. 给定任意子输入都返回第一个符合条件的子串
+ 3. 通过for循环找出所有子串
+ */
 export default (str) => {
-  // 建立数据结构，堆栈，保存数据
   let r = []
-  // 给定任意子输入都返回第一个符合条件的子串
   let match = (str) => {
     let j = str.match(/^(0+|1+)/)[0]
     let o = (j[0] ^ 1).toString().repeat(j.length)
@@ -15,7 +19,7 @@ export default (str) => {
       return ''
     }
   }
-  // 通过for循环控制程序运行的流程
+
   for (let i = 0, len = str.length - 1; i < len; i++) {
     let sub = match(str.slice(i))
     if (sub) {

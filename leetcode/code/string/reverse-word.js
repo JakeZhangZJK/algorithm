@@ -2,6 +2,7 @@
 // https://leetcode.cn/problems/reverse-words-in-a-string-iii/submissions/
 // 知识点：Array和String API的基本应用
 /**
+ 知识点： Array和String API的基本应用
  思路：
  1. 字符串按空格进行分隔，保存数组，数组的元素的先后顺序就是单词的顺序
  2. 对数组进行遍历，然后每个元素进行反转

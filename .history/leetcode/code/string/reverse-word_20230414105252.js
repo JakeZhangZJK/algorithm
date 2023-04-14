@@ -23,10 +23,7 @@
 // 方法3 match匹配
 export default (str) => {
   // 对输入进行了限制（空）单词用空格隔开（没见过单词中有<等特殊字符之前考虑的是空格，单引号）(LeetCode测试用例)
-  return str.length
-    ? str
-        .match(/[\S]+/g)
-        .map((item) => item.split("").reverse().join(""))
-        .join(" ")
-    : "";
-};
+  return str.length ? str.match(/[\S]+/g).map(item =>
+    item.split('').reverse().join('')
+  ).join(' ') : ''
+}

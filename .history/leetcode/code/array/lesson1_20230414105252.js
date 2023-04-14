@@ -9,6 +9,11 @@ export default (str) => {
   let num = str.split('')
   // 保存键盘映射后的字母内容，如 23=>['abc','def']
   let code = num.map(item => map[item])
+  // num.forEach(item => {
+  //   if (map[item]) {
+  //     code.push(map[item])
+  //   }
+  // })
   let comb = (arr) => {
     // 临时变量用来保存前两个组合的结果
     let tmp = []

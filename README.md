@@ -43,5 +43,5 @@
   npm test
   ```
 显示如下即为成功
-![测试](./test.png)
+![测试](./images/test.png)
 

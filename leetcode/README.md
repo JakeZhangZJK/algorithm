@@ -1,4 +1,4 @@
-1. 安装
+1. 安装依赖
 
   ```
   npm install --save-dev jest

@@ -2,7 +2,7 @@
 
   ```
   npm install --save-dev jest
-  npm install babel-jest babel-core@^7.0.0-bridge.0 @babel/core regenerator-runtime babel-preset-env
+  npm install babel-jest babel-core@^7.0.0-bridge.0 @babel/core regenerator-runtime babel-preset-env @babel/preset-env
   ```
   编辑package.json
 
@@ -17,21 +17,20 @@
   编辑.babelrc
   ```
   {
-    "presets": ["env", "react"]
-  }
+    "presets": ["@babel/preset-env"]
+}
   ```
 
 2. 创建js文件
 
   ```js
-  function sum(a, b) {
+  export const sum = (a, b)=> {
     return a + b;
   }
-  export default sum;
   ```
 
   ```js
-  import sum from './index'
+  import {sum} from './sum.js'
 
   test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
@@ -43,4 +42,6 @@
   ```
   npm test
   ```
+显示如下即为成功
+![测试](./test.png)
 
